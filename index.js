@@ -37,7 +37,7 @@ var connection = mysql.createConnection({
 //insert data 
 app.post('/insert', function(req,res){
     
-       var queryString = "insert into members(firstName,lastName,email,phone) values('"+req.body.fname+"','"+req.body.lname+"','"+req.body.email+"','"+req.body.phone+"')";
+       var queryString = "insert into userss(user_email) values('"+req.body.email+"')";
        
        connection.query(queryString,function(error,results){
            if(error)
